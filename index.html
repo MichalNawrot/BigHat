@@ -13,60 +13,32 @@
 <body>
     <header class="header container">
         <div class="header__logo">
-            Logo
+            <img src="./images/logo.png" alt="" class="logo">
+            <p class="logo-text">big hat</p>
         </div>
         <nav class="header__nav">
             <ul class="header__links">
-                <li><a href="#">Home</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Method</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
-            <button class="header__login login-popup">Login</button>
         </nav>
-
     </header>
-    <main class="main container">
-        <div class="card">
-            <span class="icon-close">
-                <ion-icon name="close" id="close"></ion-icon>
-            </span>
-            <div class="form-box login">
-                <h2>Login</h2>
-                <form action="#">
-                    <div class="input-box">
-                        <span class="icon">
-                            <ion-icon name="mail"></ion-icon>
-                        </span>
-                        <input type="email" name="email" id="email" required>
-                        <label for="email">Email</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon">
-                            <ion-icon name="lock-closed"></ion-icon>
-                        </span>
-                        <input type="password" name="password" id="password" required>
-                        <label for="password">Password</label>
-                    </div>
 
-                    <div class="remember-forgot">
-                        <input type="checkbox" name="remember" id="remember">
-                        <label for="remember">Remeber me</label>
-                        <a href="#" class="forgot-link">Forgot Password?</a>
-                    </div>
-                    <button type="submit" class="btn">Login</button>
-                    <div class="login-register">
-                        <p>Don't have an account?</p>
-                        <a href="#" class="register-link">Register</a>
-                    </div>
-                </form>
+    <main class="main container">
+        <section class="hero">
+            <div class="hero__text">
+                <h1>Digital wonders, user delights</h1>
+                <h2>Bridging the Gap Between Beauty and Purpose!</h2>
             </div>
-        </div>
+            <div class="hero__img">
+                <img src="./images/cameleon.png" alt="Cameleon">
+            </div>
+        </section>
     </main>
 
-    <script src="main.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

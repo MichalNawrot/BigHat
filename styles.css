@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;500;600;700;900&family=Rubik:wght@400;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Moul&display=swap');
 
 *,
 *::before,
@@ -15,12 +15,15 @@ body {
     background-color: #eeeeea;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: Montserrat;
     min-height: 100vh;
-    background-image: url("./images/3.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-color: rgba(0, 24, 28, 0.80);
+    background: linear-gradient(0deg, #067882, rgba(0, 24, 28, 0.8));
+}
+
+p, h1, h2, h3, h4, h5, h6, a {
+    margin: 0;
+    padding: 0;
 }
 
 img {
@@ -33,18 +36,36 @@ img {
     /* background-color: lightcoral; */
 }
 
+/* || HEADER  */
+
 .header {
+    padding-top: 4rem;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    /* background-color: lightblue; */
+    /* background-color: lightgoldenrodyellow; */
 }
 
 .header__logo {
-    font-size: 2rem;
-    color: #fff;
-    font-weight: 900;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.logo {
+    max-height: 3.625rem;
+}
+
+.logo-text {
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 3.5625rem;
+    /* 142.5% */
+    letter-spacing: 0.0125rem;
+    background: var(--Background-Gradient, linear-gradient(40deg, #59F49C 0.79%, #067882 79.29%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .header__nav {
@@ -56,8 +77,9 @@ img {
 
 .header__nav * {
     text-decoration: none;
+    text-transform: uppercase;
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 600;
     color: #fff;
 }
 
@@ -87,166 +109,56 @@ img {
     transform: scaleX(1);
 }
 
-.header__login {
-    font: inherit;
-    font-weight: 500;
-    /* height: 3em; */
-    padding: 0.5em 2em;
-    background-color: transparent;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
-    transition: .5s;
-}
-
-.header__login:hover {
-    background: white;
-    color: black;
-}
+/* || HERO section */
 
 .main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    /* background-image: url("./images/cameleon.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
     /* background-color: lightblue; */
 }
 
-.card {
-    min-width: max(280px, 40%);
-    padding-bottom: 3rem;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    border-radius: 1rem;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(1rem);
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: scale(0);
-    transition: transform .5s ease;
+.hero {
+    position: relative;
+    z-index: 0;
 }
 
-.card.active-popup {
-    transform: scale(1);
+.hero__text {
+    padding-top: 5rem;
+    z-index: 1;
 }
 
-.icon-close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 1.7rem;
-    color: #162938;
-}
-
-.icon-close #close:hover {
-    cursor: pointer;
-    transform: scale(1.2);
-}
-
-.form-box h2 {
-    font-size: 2rem;
-    color: #162938;
+.hero__text h1 {
+    color: var(--Light-text, #FFF);
     text-align: center;
-    position: relative;
-
-    /* &::before {
-        position: absolute;
-        content: '';
-        inset: -0.5em;
-        z-index: -1;
-        background: radial-gradient(hsla(0, 0%, 100%, 0.493), transparent 50%);
-    } */
+    /* H1 decorate */
+    font-family: Moul;
+    font-size: 3.625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 5rem;
+    letter-spacing: 0.0125rem;
 }
 
-.input-box {
-    position: relative;
-    width: 100%;
-    /* background-color: lightblue; */
-    height: 3.5rem;
-    border-bottom: 2px solid #162938;
-    margin: 2rem 0;
-}
+.hero__text h2 {
+    color: var(--Light-text, #FFF);
+    text-align: center;
 
-.input-box label {
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    font-size: 1rem;
-    color: #162938;
-    font-weight: 500;
-    pointer-events: none;
-    transform: translateY(-50%);
-    transition: .5s;
-}
-
-.input-box input:focus~label,
-.input-box input:valid~label {
-    top: -0.5rem;
-}
-
-.input-box input {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 1rem;
-    color: #162938;
+    /* H2 */
+    font-size: 2.5rem;
+    font-style: normal;
     font-weight: 600;
-    padding: 0 2rem 0 0.3rem;
+    line-height: 3.5625rem;
+    /* 142.5% */
+    letter-spacing: 0.0125rem;
 }
 
-.input-box .icon {
+.hero__img {
+    z-index: 2;
     position: absolute;
-    right: 0.5rem;
-    font-size: 1.2rem;
-    color: #162938;
-    line-height: 2.5rem;
-}
-
-.remember-forgot,
-.login-register {
-    font-size: .9rem;
-    color: #162938;
-    font-weight: 500;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.remember-forgot input {
-    accent-color: #162938;
-    margin-right: 3px;
-}
-
-p {
-    margin: 0;
-}
-
-.remember-forgot a,
-.login-register a {
-    margin: 0;
-    color: #162938;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.remember-forgot a:hover,
-.login-register a:hover {
-    text-decoration: underline;
-}
-
-.btn {
-    width: 100%;
-    background-color: #162938;
-    color: white;
-    font-size: 1rem;
-    font-weight: 700;
-    padding: 0.5em;
-    border: none;
-    outline: none;
-    border-radius: 5px;
+    top: 4rem;
 }
